@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appenders>
+		<!-- <appender name="STDOUT"
+			class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%d{HH:mm:ss.SSS} %thread [%-5level] %logger{5} - %msg %n</pattern>
+			</encoder>
+		</appender> -->
+		<console name="console" target="SYSTEM_OUT">
+			<patternLayout pattern="%d{HH:mm:ss.SSS} %thread [%-5level] %logger{5} - %msg %n"/> 
+		</console>
+	</appenders>
+	<loggers>
+	    <logger name="jdbc" level="OFF"/>
+	    <logger name="jdbc.sqlonly" level="OFF"/>
+	    <logger name="jdbc.sqltiming" level="DEBUG"/>
+	    <logger name="jdbc.audit" level="OFF"/>
+	    <logger name="jdbc.resultset" level="OFF"/>
+	    <logger name="jdbc.resultsettable" level="OFF"/>
+	    <logger name="jdbc.connection" level="OFF"/>
+	    <logger name="jdbc.sqltiming" level="INFO"/>
+	    <logger name="calendar" level="INFO" additivity="false">
+			<AppenderRef ref="console" />
+		</logger>
+	    <logger name="com.insilicogen" level="INFO" additivity="false">
+	        <AppenderRef ref="console" />
+	    </logger>
+	    <root level="ERROR"  >
+	        <AppenderRef ref="console" />
+	    </root>
+    </loggers>
+</configuration>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+			
+<mapper namespace="calendar.mapper.MemberMapper">
+    <select id="findAll" resultType="calendar.dto.Member">
+        SELECT 
+        	id
+        	, pw
+        	, name
+        	, email
+        	, level
+            , DATE_FORMAT(createdAt, '%Y-%m-%d %H:%i:%s') AS createdAt
+            , DATE_FORMAT(updatedAt, '%Y-%m-%d %H:%i:%s') AS updatedAt
+        FROM 
+        	member
+        ORDER BY createdAt
+    </select>
+</mapper>

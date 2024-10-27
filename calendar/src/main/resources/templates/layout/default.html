@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	  
+<head th:replace="~{fragments/head :: headFragment}"></head>
+
+<body>
+	<!--  Body Wrapper -->
+	<div class="page-wrapper" id="main-wrapper" data-layout="vertical" 
+		 data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+		
+		<!-- Sidebar -->
+		<aside th:replace="fragments/leftmenu :: leftmenuFragment"></aside>		
+		
+		<!--  Main wrapper -->
+		<div class="body-wrapper"> 
+		
+			<!--  Header Start -->
+			<header th:replace="fragments/header :: headerFragment"></header>
+			
+			<div class="container-fluid">
+				<div class="card w-100">
+					<div class="card-body">
+						
+						<!-- 글 쓰는 곳 -->
+						<th:block layout:fragment="customContents"></th:block>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Main wrapper -->
+		
+	</div>
+	<!--  End Body Wrapper -->
+	
+	<!-- start: Javascript -->
+	<script th:src="@{/assets/libs/jquery/dist/jquery.min.js}"></script>
+	<script th:src="@{/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{/assets/js/sidebarmenu.js}"></script>
+	<script th:src="@{/assets/js/app.min.js}"></script>
+	<script th:src="@{/assets/libs/simplebar/dist/simplebar.js}"></script>
+</body>
+</html>

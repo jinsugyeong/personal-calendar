@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Sidebar Start -->
+<aside class="left-sidebar" th:fragment="leftmenuFragment">
+	<!-- Sidebar scroll-->
+	<div>
+		<div class="brand-logo d-flex align-items-center justify-content-between">
+			<!-- 로고 -->
+			<span style="font-size:50px; margin-bottom: 15px;">
+				<i class="ti ti-calendar"></i>
+				Personal Calendar
+			</span>
+			
+			<!-- 슬라이드 메뉴 X버튼 -->
+			<div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+				<i class="ti ti-x fs-8"></i>
+			</div>
+		</div>
+		
+		<!-- 메뉴 시작-->
+		<nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+			<ul id="sidebarnav">
+				<!-- <li class="nav-small-cap">
+					<i class="ti ti-dots nav-small-cap-icon fs-4"></i> 
+					<span class="hide-menu">Home</span>
+				</li> -->
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/" aria-expanded="false">
+						<span><i class="ti ti-calendar"></i></span>
+						<span class="hide-menu">Calendar</span>
+					</a>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="#" aria-expanded="false">
+						<span><i class="ti ti-article"></i></span>
+						<span class="hide-menu">Approval</span>
+					</a>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="#" aria-expanded="false">
+						<span><i class="ti ti-bell"></i></span>
+						<span class="hide-menu">Notication</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- 메뉴끝 -->
+	</div>
+	<!-- End Sidebar scroll-->
+</aside>
+<!--  Sidebar End -->
+</html>

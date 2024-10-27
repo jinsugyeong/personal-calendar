@@ -1,0 +1,22 @@
+server.port: 80
+
+spring:
+  application:
+    name: calendar
+  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/devDb?serverTimezone=UTC&characterEncoding=UTF-8
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://localhost:3306/devDb?serverTimezone=UTC&characterEncoding=UTF-8
+    username: jinsugyeong
+    password: as0098
+  thymeleaf:
+    cache: false
+
+mybatis:
+#  config-location: classpath:mybatis-config.xml
+  mapper-locations: mapper/*.xml
+  type-aliases-package: calendar
+
+logging:
+  config: classpath:logback.xml
