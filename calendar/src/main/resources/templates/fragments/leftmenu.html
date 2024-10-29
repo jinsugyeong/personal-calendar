@@ -6,10 +6,9 @@
 	<div>
 		<div class="brand-logo d-flex align-items-center justify-content-between">
 			<!-- 로고 -->
-			<span style="font-size:50px; margin-bottom: 15px;">
-				<i class="ti ti-calendar"></i>
-				Personal Calendar
-			</span>
+			<div class="mt-3 mb-4">
+				<img th:src="@{/assets/images/logos/menu_logo.png}">
+			</div>
 			
 			<!-- 슬라이드 메뉴 X버튼 -->
 			<div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -20,26 +19,37 @@
 		<!-- 메뉴 시작-->
 		<nav class="sidebar-nav scroll-sidebar" data-simplebar="">
 			<ul id="sidebarnav">
-				<!-- <li class="nav-small-cap">
+				<li class="nav-small-cap">
 					<i class="ti ti-dots nav-small-cap-icon fs-4"></i> 
 					<span class="hide-menu">Home</span>
-				</li> -->
+				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="/" aria-expanded="false">
+					<a class="sidebar-link" th:href="@{/}" aria-expanded="false">
+						<span><i class="ti ti-home"></i></span>
+						<span class="hide-menu">Main</span>
+					</a>
+				</li>
+				
+				<li class="nav-small-cap">
+					<i class="ti ti-dots nav-small-cap-icon fs-4"></i> 
+					<span class="hide-menu">Schedule</span>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" th:href="@{/calendar}" aria-expanded="false">
 						<span><i class="ti ti-calendar"></i></span>
 						<span class="hide-menu">Calendar</span>
 					</a>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="#" aria-expanded="false">
-						<span><i class="ti ti-article"></i></span>
-						<span class="hide-menu">Approval</span>
+					<a class="sidebar-link" th:href="@{/application}" aria-expanded="false">
+						<span><i class="ti ti-pencil"></i></span>
+						<span class="hide-menu">Application</span>
 					</a>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="#" aria-expanded="false">
-						<span><i class="ti ti-bell"></i></span>
-						<span class="hide-menu">Notication</span>
+					<a class="sidebar-link" th:href="@{/approval}" aria-expanded="false">
+						<span><i class="ti ti-article"></i></span>
+						<span class="hide-menu">Approval</span>
 					</a>
 				</li>
 			</ul>

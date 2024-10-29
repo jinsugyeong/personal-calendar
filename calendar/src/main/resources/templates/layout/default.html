@@ -19,13 +19,8 @@
 			<header th:replace="fragments/header :: headerFragment"></header>
 			
 			<div class="container-fluid">
-				<div class="card w-100">
-					<div class="card-body">
-						
-						<!-- 글 쓰는 곳 -->
-						<th:block layout:fragment="customContents"></th:block>
-					</div>
-				</div>
+				<!-- 컨텐츠 나오는 곳 -->
+				<th:block layout:fragment="customContents"></th:block>
 			</div>
 		</div>
 		<!-- End Main wrapper -->

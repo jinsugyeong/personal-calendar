@@ -9,7 +9,8 @@
         	, pw
         	, name
         	, email
-        	, level
+        	, level_code
+        	, team_name
             , DATE_FORMAT(createdAt, '%Y-%m-%d %H:%i:%s') AS createdAt
             , DATE_FORMAT(updatedAt, '%Y-%m-%d %H:%i:%s') AS updatedAt
         FROM 
