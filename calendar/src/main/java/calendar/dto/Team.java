@@ -9,13 +9,10 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Member {
-	private String id;
-	private String pw;
-    private String name;
-    private String email;
-    private String level_code;
-    private String team_name;
+public class Team {
+	private String name;
+	private String depth;
+    private String parentTeam;
     private String createdAt;
     private String updateddAt;
 }
